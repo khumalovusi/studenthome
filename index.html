@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNest Accommodations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #2a9d8f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .accommodation-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .accommodation-card {
+            width: 30%;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .accommodation-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .accommodation-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .accommodation-card p {
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .accommodation-card button {
+            background: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .accommodation-card button:hover {
+            background: #21867a;
+        }
+
+        .payment-section {
+            background: white;
+            margin: 40px 0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-section h2 {
+            font-size: 2rem;
+            color: #2a9d8f;
+        }
+
+        .payment-section p {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            background: #2a9d8f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EduNest Accommodations</h1>
+        <p>We Make Student Living Simple and Stress-Free</p>
+    </header>
+
+    <div class="container">
+        <h2>Choose Your Accommodation</h2>
+        <div class="accommodation-container">
+            <div class="accommodation-card">
+                <img src="https://drive.google.com/uc?export=view&id=1yHEej42sN2kZkk61IGzyNICukhZnmRcJ" alt="Shared Room">
+                <h3>Shared Room - Mixed Gender</h3>
+                <p>10-minute walking distance to campus</p>
+                <p>Price: R3500 per month</p>
+                <button onclick="window.location.href='#payment'">Select & Pay</button>
+            </div>
+
+            <div class="accommodation-card">
+                <img src="https://drive.google.com/uc?export=view&id=1Hy8uPOG-cjDyvKJIGgBku3DGabwCQZmc" alt="Single Room">
+                <h3>Single Room - Mixed Gender</h3>
+                <p>10-minute walking distance to campus</p>
+                <p>Price: R4000 per month</p>
+                <button onclick="window.location.href='#payment'">Select & Pay</button>
+            </div>
+
+            <div class="accommodation-card">
+                <img src="https://drive.google.com/uc?export=view&id=1E3XRWjsjII0dH3M5Xh4v8MSh25Io0Fe0" alt="Shared Room - Female Only">
+                <h3>Shared Room - Female Only</h3>
+                <p>15-minute walking distance to campus</p>
+                <p>Price: R3500 per month</p>
+                <button onclick="window.location.href='#payment'">Select & Pay</button>
+            </div>
+        </div>
+
+        <div class="payment-section" id="payment">
+            <h2>Secure Your Spot</h2>
+            <p>To secure your accommodation, make a minimum deposit of R500. Full payment is due by the start of the semester. Payments can be reversed with proof of payment.</p>
+            <p><strong>Bank Details:</strong></p>
+            <p>Account Number: 4112 347473</p>
+            <p>Branch Code: 632005 (ABSA)</p>
+            <p>After making your payment, upload proof below:</p>
+            <form action="YOUR_SERVER_SCRIPT" method="post" enctype="multipart/form-data">
+                <label for="proof">Proof of Payment:</label><br>
+                <input type="file" id="proof" name="proof" accept="image/*, application/pdf" required><br><br>
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EduNest Accommodations. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+
